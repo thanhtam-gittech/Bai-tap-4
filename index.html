@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bai tap 4</title>
+  <style>
+    html,body { margin:0; padding:0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000000;
+      font-weight: 540; }
+    .page {
+      width: 750px;
+      margin: 18px auto;
+      background-color: rgb(0, 209, 209);
+      padding: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border: 2px solid rgba(0,0,0,1); }
+    .logo-box {
+      width: 340px;
+      margin: 0 auto 18px auto;
+      border-radius: 20px;
+      border: 2px solid rgba(0,0,0,1);
+      background: linear-gradient(rgb(61, 224, 216), cyan);
+      border-spacing: 0; }
+    .logo-box td {
+      text-align: center;
+      padding: 8px 22px;
+      font-weight: bold;
+      font-size: 28px;
+      color: #000000; }
+    .logo-box tr:first-child td {
+      border-bottom: 3px solid rgb(0, 0, 0); }
+    h2 { text-align:center; margin: 8px; font-size:26px; }
+    p.gc { text-align:center; margin: 4px; }
+    .form-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px; }
+    .form-table td { padding: 6px; vertical-align: top; }
+    .label {
+      text-align: left;
+      padding-left: 6px;
+      gap: 5px; }
+    input[type=text] {
+      padding: 6px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      background: #ffffff;
+      box-sizing: border-box; }
+    #first { width: 180px; margin-left: 150px; font-size: 16px; }
+    #last { width: 150px; margin-left: 0;font-size: 16px; }
+    #addr1 { width: 300px; margin-left: 155px; font-size: 16px; }
+    #addr2 {  width: 300px; margin-left: 155px; font-size: 16px; }
+    #city { width: 200px; margin-left: 200px; font-size: 16px; }
+    #state {  width: 60px; margin-left: 0; font-size: 16px; }
+    #zip { width: 80px; margin-left: 0; font-size: 16px; }
+    #country {  width: 200px; margin-left: 170px; font-size: 16px; }
+    #product { width: 200px; margin-left: 115px; font-size: 16px; }
+    #date { width: 200px; margin-left: 115px; font-size: 16px; }
+    #seri { width: 200px; margin-left: 115px; font-size: 16px; }
+    hr { border-top: 3px solid rgba(192, 23, 23, 0.452); }
+    .group-inline { display: flex; flex-wrap: wrap; gap: 0; }
+    .group-inline label { 
+      flex: 0 0 20%; 
+      box-sizing: border-box; 
+      padding: 5px 10px;  
+      white-space: nowrap; 
+      margin-left: 100px; }
+    textarea { height: 120px; }
+    .form-row { display:flex; gap:12px; align-items:flex-start; margin-bottom:12px; }
+    .form-row label { flex:0 0 30%; }
+    .form-row textarea { flex:1; min-height:120px; }
+    .btn-group { display:flex; justify-content:center; gap:12px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <table class="logo-box">
+      <tr>
+        <td>Jackson</td>
+      </tr>
+      <tr>
+        <td>Electronics</td>
+      </tr>
+    </table>
+        <h2>Registration Form</h2>
+        <p class="gc">Register your Jackson Electronics product here</p>
+    <form action="#" method="post">
+      <table class="form-table">
+        <tr>
+          <td class="label">
+            <label for="first">First Name:</label>
+            <input id="first" name="first" type="text">
+            <label for="last">Last Name:</label>
+            <input id="last" name="last" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            <label for="addr1"> Address 1: </label>
+            <input id="addr1" name="A1" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            <label for="addr2"> Address 2: </label>
+            <input id="addr2" name="A2" type="text">
+          </td>
+        </tr>
+         <tr>
+          <td class="label">
+            <label for="city">City:</label>
+            <input id="city" name="C" type="text">
+            <label for="state"> State: </label>
+            <input id="state" name="S" type="text">
+            <label for="zip"> Zip: </label>
+            <input id="zip" name="Z" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td class="label">
+            <label for="country">Country:</label>
+            <input id="country" name="country" type="text" value="United States">
+          </td>
+        </tr>
+      </table>
+      <hr>
+      <table>
+        <tr>
+          <td class="label"><label for="product">Product:</label></td>
+          <td><select id="product" name="product"><option>ScanMaster</option><option>PhotoPro</option></select></td>
+        </tr>
+        <tr>
+          <td class="label"><label for="date">Date Purchased:</label></td>
+          <td><input id="date" name="date" type="text" placeholder="DD/MM/YYYY"></td>
+        </tr>
+        <tr>
+          <td class="label"><label for="seri">Serial#:</label></td>
+          <td><input id="seri" name="serial" type="text"></td>
+        </tr>
+        <tr>
+          <td class="label">Used for:</td>
+          <td colspan="3">
+            <div class="group-inline">
+              <label><input type="radio" name="used" value="home"> Home</label>
+              <label><input type="radio" name="used" value="edu"> Educational Institution</label>
+              <label><input type="radio" name="used" value="business"> Business</label>
+              <label><input type="radio" name="used" value="other"> Other</label>
+              <label><input type="radio" name="used" value="gov"> Government</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">System (check all that apply):</td>
+          <td colspan="4">
+            <div class="group-inline">
+              <label><input type="checkbox" name="os[]" value="windows"> Windows</label>
+              <label><input type="checkbox" name="os[]" value="macintosh"> Macintosh</label>
+              <label><input type="checkbox" name="os[]" value="unix"> UNIX</label>
+              <label><input type="checkbox" name="os[]" value="other"> Other</label>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <hr>
+      <div class="form-row">
+        <label for="comments">Comments?:</label>
+        <textarea id="comments" name="comments" placeholder="Type any additional notes here..."></textarea>
+      </div>
+      <div class="btn-group">
+        <input class="btn" type="submit" value="Click to register">
+        <input class="btn" type="reset" value="Click to cancel">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
